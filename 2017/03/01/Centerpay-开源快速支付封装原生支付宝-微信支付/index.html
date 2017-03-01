@@ -10,20 +10,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="依赖jar包
 
-12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryAct">
+12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryActiv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centerpay 开源快速支付封装原生支付宝&微信支付">
 <meta property="og:url" content="http://2013mzhou.github.io/2017/03/01/Centerpay-开源快速支付封装原生支付宝-微信支付/index.html">
 <meta property="og:site_name" content="Gizthon's Blog">
 <meta property="og:description" content="依赖jar包
 
-12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryAct">
-<meta property="og:updated_time" content="2017-03-01T16:00:48.000Z">
+12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryActiv">
+<meta property="og:updated_time" content="2017-03-01T16:13:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centerpay 开源快速支付封装原生支付宝&微信支付">
 <meta name="twitter:description" content="依赖jar包
 
-12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryAct">
+12345678centerpay-1.0.0-20170218.jar 核心jar包alipaySdk-20161222.jar     原阿里支付jar包libammsdk.jar              原微信支付jar包在当前包下面创建（用过微信的都知道）   .wxapi.WXEntryActivity           .wxapi.WXPayEntryActiv">
   
     <link rel="alternative" href="/atom.xml" title="Gizthon&#39;s Blog" type="application/atom+xml">
   
@@ -183,15 +183,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-         <a id="more"></a>
-<ul>
+        <ul>
 <li>依赖jar包</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">centerpay-<span class="number">1.0</span>.0-<span class="number">20170218</span>.jar 核心jar包</div><div class="line">alipaySdk-<span class="number">20161222</span>.jar     原阿里支付jar包</div><div class="line">libammsdk.jar              原微信支付jar包</div><div class="line"></div><div class="line">在当前包下面创建（用过微信的都知道）</div><div class="line">   .wxapi.WXEntryActivity        </div><div class="line">   .wxapi.WXPayEntryActivity</div></pre></td></tr></table></figure>
-<!--more-->
 <ul>
 <li>在manifest中添加如下配置 </li>
 </ul>
+<a id="more"></a>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">activity</span> </span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">".wxapi.WXEntryActivity"</span></div><div class="line">    <span class="attr">android:configChanges</span>=<span class="string">"keyboardHidden|orientation|screenSize"</span></div><div class="line">    <span class="attr">android:exported</span>=<span class="string">"true"</span>    </div><div class="line">    <span class="attr">android:screenOrientation</span>=<span class="string">"portrait"</span></div><div class="line">    <span class="attr">android:theme</span>=<span class="string">"@android:style/Theme.Translucent.NoTitleBar"</span> /&gt;</div><div class="line">    </div><div class="line"><span class="tag">&lt;<span class="name">activity-alias</span> 			</span></div><div class="line">	 <span class="attr">android:name</span>=<span class="string">".wxapi.WXPayEntryActivity"</span></div><div class="line">	 <span class="attr">android:exported</span>=<span class="string">"true"</span></div><div class="line">	 <span class="attr">android:targetActivity</span>=<span class="string">"com.geekdroid.sdk.pay.wxapi.PaymentActivity"</span> /&gt;</div><div class="line"> </div><div class="line"> <span class="tag">&lt;<span class="name">activity</span></span></div><div class="line"> 	 <span class="attr">android:name</span>=<span class="string">"com.geekdroid.sdk.pay.impl.CenterPayActivity"</span></div><div class="line"> 	 <span class="attr">android:launchMode</span>=<span class="string">"singleTop"</span> /&gt;</div><div class="line">  		</div><div class="line"><span class="tag">&lt;<span class="name">activity</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">"com.geekdroid.sdk.pay.wxapi.PaymentActivity"</span></div><div class="line">    <span class="attr">android:exported</span>=<span class="string">"true"</span> /&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">activity</span> </span></div><div class="line"> 	  <span class="attr">android:name</span>=<span class="string">"com.alipay.sdk.app.H5PayActivity"</span></div><div class="line"> 	  <span class="attr">android:configChanges</span>=<span class="string">"orientation|keyboardHidden|navigation|screenSize"</span></div><div class="line"> 	  <span class="attr">android:exported</span>=<span class="string">"false"</span></div><div class="line"> 	  <span class="attr">android:screenOrientation</span>=<span class="string">"behind"</span></div><div class="line"> 	  <span class="attr">android:windowSoftInputMode</span>=<span class="string">"adjustResize|stateHidden"</span> /&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li>调用支付， 根据新版支付宝和微信的说明，加密签名等相关操作全部放在服务端比较合适，因此，以下参数全部都放在服务端，每次支付之前从服务端获取即可</li>
@@ -235,7 +234,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">快速支付,微信,支付宝</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">快速支付,微信,支付宝,Centerpay</a>
         		</li>
       		
 		</ul>
@@ -415,11 +414,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git,submodule</a>
+                <a href="javascript:void(0)" class="js-tag color2">快速支付,微信,支付宝,Centerpay</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">快速支付,微信,支付宝</a>
+                <a href="javascript:void(0)" class="js-tag color3">git,submodule,子模块</a>
               </li>
             
             <div class="clearfix"></div>
