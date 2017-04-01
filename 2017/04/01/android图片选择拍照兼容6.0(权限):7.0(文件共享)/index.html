@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,submodule,子模块," />
+  <meta name="keywords" content="选择图片，拍照，兼容6.0，兼容7.0," />
 
 
 
@@ -87,19 +87,28 @@
 
 
 
-<meta name="description" content="脚本概要： 1.更新脚本如果本地有更改，需要保存如果本地没有更改，不需要保存
-如果本地不是master分支，需要切换到master分支">
+<meta name="description" content="###一行代码系列之图片选择模块
+
+android选择图片／拍照 封装到极致 兼容6.0(权限)/7.0(文件共享)
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960模块：图片选择模块功能描述：封装极致图片选择拍照模块，简化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git 子模块命令行批量处理思路及其命令">
-<meta property="og:url" content="http://2013mzhou.github.io/2017/03/01/git-子模块命令行批量处理思路及其命令/index.html">
+<meta property="og:title" content="一行代码系列之图片选择模块">
+<meta property="og:url" content="http://2013mzhou.github.io/2017/04/01/android图片选择拍照兼容6.0(权限):7.0(文件共享)/index.html">
 <meta property="og:site_name" content="Gizthon's Blog">
-<meta property="og:description" content="脚本概要： 1.更新脚本如果本地有更改，需要保存如果本地没有更改，不需要保存
-如果本地不是master分支，需要切换到master分支">
+<meta property="og:description" content="###一行代码系列之图片选择模块
+
+android选择图片／拍照 封装到极致 兼容6.0(权限)/7.0(文件共享)
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960模块：图片选择模块功能描述：封装极致图片选择拍照模块，简化">
 <meta property="og:updated_time" content="2017-04-01T15:02:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 子模块命令行批量处理思路及其命令">
-<meta name="twitter:description" content="脚本概要： 1.更新脚本如果本地有更改，需要保存如果本地没有更改，不需要保存
-如果本地不是master分支，需要切换到master分支">
+<meta name="twitter:title" content="一行代码系列之图片选择模块">
+<meta name="twitter:description" content="###一行代码系列之图片选择模块
+
+android选择图片／拍照 封装到极致 兼容6.0(权限)/7.0(文件共享)
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960模块：图片选择模块功能描述：封装极致图片选择拍照模块，简化">
 
 
 
@@ -127,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://2013mzhou.github.io/2017/03/01/git-子模块命令行批量处理思路及其命令/"/>
+  <link rel="canonical" href="http://2013mzhou.github.io/2017/04/01/android图片选择拍照兼容6.0(权限):7.0(文件共享)/"/>
 
 
 
 
 
-  <title> git 子模块命令行批量处理思路及其命令 | Gizthon's Blog </title>
+  <title> 一行代码系列之图片选择模块 | Gizthon's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -252,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://2013mzhou.github.io/2017/03/01/git-子模块命令行批量处理思路及其命令/">
+    <link itemprop="mainEntityOfPage" href="http://2013mzhou.github.io/2017/04/01/android图片选择拍照兼容6.0(权限):7.0(文件共享)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gizthon">
@@ -273,7 +282,7 @@
             
             
               
-                git 子模块命令行批量处理思路及其命令
+                一行代码系列之图片选择模块
               
             
           </h1>
@@ -288,8 +297,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-01T18:05:35+08:00">
-                2017-03-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-01T22:55:30+08:00">
+                2017-04-01
               </time>
             
 
@@ -324,10 +333,11 @@
       
 
       
-        <p><strong>脚本概要：</strong><br> 1.更新脚本<br>如果本地有更改，需要保存<br>如果本地没有更改，不需要保存</p>
-<p>如果本地不是master分支，需要切换到master分支<br> <a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">1.切换到master分支</div><div class="line"></div><div class="line"></div><div class="line"> </div><div class="line">2.如果当前有没有提交的，提交下</div><div class="line"></div><div class="line">git submodule foreach git checkout master</div><div class="line"></div><div class="line">然后pull所有的</div><div class="line">git submodule foreach git pull</div><div class="line">git submodule foreach git checkout master</div><div class="line">//如果当前更改了，又没有提交，这时切换到master 分支</div><div class="line">git cherry-pick aaaa</div><div class="line">然后执行git push </div><div class="line">git submodule foreach git push origin master</div><div class="line"></div><div class="line"> 3.提交脚本</div><div class="line"> </div><div class="line"> ----------更新操作---------------</div><div class="line"></div><div class="line"></div><div class="line">在这之前要进行数据保存</div><div class="line">git submodule foreach git checkout master</div><div class="line">  如果当前状态有出现游离状态的商品，需要 git cherry-pick  [commitid]</div><div class="line"></div><div class="line"> 本地子模块提交,(需要判断是否有存在修改的，有需要的才提交，没有需要的就不提交)</div><div class="line">git submodule foreach git  add .</div><div class="line">git submodule foreach git commit -m &apos;commit when updating&apos;</div><div class="line"></div><div class="line"></div><div class="line"> 本地主工程暂存</div><div class="line">git stash</div><div class="line"></div><div class="line"></div><div class="line"> 更新操作</div><div class="line">git pull</div><div class="line"></div><div class="line"> 确保所有的都更新下来</div><div class="line">git submodule foreach git pull origin master</div><div class="line"></div><div class="line"></div><div class="line"> 判断是否有冲突</div><div class="line">git submodule foreach git mergetool</div><div class="line"></div><div class="line"></div><div class="line"> 切换到master分支，确保接下来修改，会出现提交到游离状态数据</div><div class="line">git submodule foreach git checkout master</div><div class="line"></div><div class="line"></div><div class="line"> 恢复本地修改状态</div><div class="line">git stash pop</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> 再次确保在master分支：注意，如果这里有修改，到了游离状态，那么切换到主分支，那么需要 git cherry-pick  [commitid]</div><div class="line"> 子模块提交</div><div class="line">git submodule foreach git checkout master</div><div class="line"></div><div class="line"></div><div class="line"> 本地是否存在不需要提交的，需要提交才提交</div><div class="line">git submodule foreach git add .</div><div class="line">git submodule foreach git commit -m &apos;update when modify&apos;</div><div class="line"></div><div class="line">git submodule foreach git push origin master</div><div class="line"></div><div class="line"></div><div class="line"> 主工程提交</div><div class="line">git add .</div><div class="line"></div><div class="line">git commit -m &apos;commit by modify&apos;</div><div class="line"></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
+        <p>###一行代码系列之图片选择模块</p>
+<blockquote>
+<p>android选择图片／拍照 封装到极致 兼容6.0(权限)/7.0(文件共享)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">模块：图片选择模块</div><div class="line">功能描述：封装极致图片选择拍照模块，简化到极致，只需一行代码即可调用</div><div class="line"></div><div class="line"></div><div class="line">//初始化,方式一</div><div class="line"> public ImageCropSelectorUtils(Activity mActivity) ;</div><div class="line"></div><div class="line">//初始化,方式二</div><div class="line">public ImageCropSelectorUtils(Activity mActivity, CropParams params);</div><div class="line"></div><div class="line">    outputFormat = OUTPUT_FORMAT;</div><div class="line">    enable = true;       //是否可以裁剪</div><div class="line">    compress = true;     //是否可以压缩</div><div class="line">    compressQuality = DEFAULT_COMPRESS_QUALITY;</div><div class="line">    compressWidth = DEFAULT_COMPRESS_WIDTH;    //压缩宽度</div><div class="line">    compressHeight = DEFAULT_COMPRESS_HEIGHT;  //压缩高度</div><div class="line">    aspectX = DEFAULT_ASPECT; // X 比例</div><div class="line">    aspectY = DEFAULT_ASPECT; // Y 比例</div><div class="line">    outputX = DEFAULT_OUTPUT; // X 输出大小</div><div class="line">    outputY = DEFAULT_OUTPUT; // Y 输出大小</div><div class="line">    shareFolder = &quot;external_storage_root&quot;;//7.0 文件共享目录， sdcard 目录</div><div class="line"></div><div class="line"></div><div class="line">    //拍照</div><div class="line">    selectorUtils.camera();</div><div class="line">    //选择图片</div><div class="line">    selectorUtils.picPhoto();</div><div class="line"></div><div class="line"></div><div class="line">    //操作返回结果处理</div><div class="line">   ImageCropSelectorUtils.CropHandlerImpl handler = new ImageCropSelectorUtils.CropHandlerImpl() &#123;</div><div class="line">           @Override</div><div class="line">           public void onPhotoCropped(File file) &#123;//如果设置了压缩，裁剪等相关处理，这里最终返回的是得到的图片文件</div><div class="line"></div><div class="line"></div><div class="line">           &#125;</div><div class="line"></div><div class="line">           @Override</div><div class="line">           public void onCancel() &#123;//操作取消</div><div class="line">               LogUtils.i(&quot;onCancel---&quot;);</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           @Override</div><div class="line">           public void onFailed(String message) &#123;//操作失败</div><div class="line">               LogUtils.i(&quot;onFailed:&quot; + message);</div><div class="line">           &#125;</div><div class="line"></div><div class="line">       &#125;;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void onActivityResult(int requestCode, int resultCode, Intent data) &#123;</div><div class="line">                super.onActivityResult(requestCode,resultCode,data);</div><div class="line">                selectorUtils.onActivityResult(handler,requestCode,resultCode,data);//调用回调</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">           protected void onDestroy() &#123;//如果需要清除缓存，使用这个方法</div><div class="line">               selectorUtils.onDestroy();</div><div class="line">               super.onDestroy();</div><div class="line">           &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -357,7 +367,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git-submodule-子模块/" rel="tag"># git,submodule,子模块</a>
+            <a href="/tags/选择图片，拍照，兼容6-0，兼容7-0/" rel="tag"># 选择图片，拍照，兼容6.0，兼容7.0</a>
           
         </div>
       
@@ -370,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/01/Centerpay-开源快速支付封装原生支付宝-微信支付/" rel="next" title="Centerpay 开源快速支付封装原生支付宝&微信支付">
-                <i class="fa fa-chevron-left"></i> Centerpay 开源快速支付封装原生支付宝&微信支付
+              <a href="/2017/03/01/git-子模块命令行批量处理思路及其命令/" rel="next" title="git 子模块命令行批量处理思路及其命令">
+                <i class="fa fa-chevron-left"></i> git 子模块命令行批量处理思路及其命令
               </a>
             
           </div>
@@ -379,10 +389,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/01/android图片选择拍照兼容6.0(权限):7.0(文件共享)/" rel="prev" title="一行代码系列之图片选择模块">
-                一行代码系列之图片选择模块 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
