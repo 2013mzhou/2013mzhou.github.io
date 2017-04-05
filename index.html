@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -132,7 +132,7 @@
   <title> Gizthon's Blog </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
 
@@ -197,7 +197,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
           </a>
         </li>
       
@@ -207,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -287,7 +307,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-01T22:55:30+08:00">
                 2017-04-01
@@ -299,6 +319,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/一行代码系列/" itemprop="url" rel="index">
+                    <span itemprop="name">一行代码系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -349,14 +391,16 @@
 
       
         
-          
-            <p>##一行代码系列之图片选择模块</p>
-<blockquote>
+          <blockquote>
 <p>android选择图片／拍照 封装到极致 兼容6.0(权限)/7.0(文件共享)</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">模块：图片选择模块</div><div class="line">功能描述：封装极致图片选择拍照模块，简化到极致，只需一行代码即可调用</div><div class="line"></div><div class="line"></div><div class="line">//初始化,方式一</div><div class="line"> public ImageCropSelectorUtils(Activity mActivity) ;</div><div class="line"></div><div class="line">//初始化,方式二</div><div class="line">public ImageCropSelectorUtils(Activity mActivity, CropParams params);</div><div class="line"></div><div class="line">    outputFormat = OUTPUT_FORMAT;</div><div class="line">    enable = true;       //是否可以裁剪</div><div class="line">    compress = true;     //是否可以压缩</div><div class="line">    compressQuality = DEFAULT_COMPRESS_QUALITY;</div><div class="line">    compressWidth = DEFAULT_COMPRESS_WIDTH;    //压缩宽度</div><div class="line">    compressHeight = DEFAULT_COMPRESS_HEIGHT;  //压缩高度</div><div class="line">    aspectX = DEFAULT_ASPECT; // X 比例</div><div class="line">    aspectY = DEFAULT_ASPECT; // Y 比例</div><div class="line">    outputX = DEFAULT_OUTPUT; // X 输出大小</div><div class="line">    outputY = DEFAULT_OUTPUT; // Y 输出大小</div><div class="line">    shareFolder = &quot;external_storage_root&quot;;//7.0 文件共享目录， sdcard 目录</div><div class="line"></div><div class="line"></div><div class="line">    //拍照</div><div class="line">    selectorUtils.camera();</div><div class="line">    //选择图片</div><div class="line">    selectorUtils.picPhoto();</div><div class="line"></div><div class="line"></div><div class="line">    //操作返回结果处理</div><div class="line">   ImageCropSelectorUtils.CropHandlerImpl handler = new ImageCropSelectorUtils.CropHandlerImpl() &#123;</div><div class="line">           @Override</div><div class="line">           public void onPhotoCropped(File file) &#123;//如果设置了压缩，裁剪等相关处理，这里最终返回的是得到的图片文件</div><div class="line"></div><div class="line"></div><div class="line">           &#125;</div><div class="line"></div><div class="line">           @Override</div><div class="line">           public void onCancel() &#123;//操作取消</div><div class="line">               LogUtils.i(&quot;onCancel---&quot;);</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           @Override</div><div class="line">           public void onFailed(String message) &#123;//操作失败</div><div class="line">               LogUtils.i(&quot;onFailed:&quot; + message);</div><div class="line">           &#125;</div><div class="line"></div><div class="line">       &#125;;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void onActivityResult(int requestCode, int resultCode, Intent data) &#123;</div><div class="line">                super.onActivityResult(requestCode,resultCode,data);</div><div class="line">                selectorUtils.onActivityResult(handler,requestCode,resultCode,data);//调用回调</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">           protected void onDestroy() &#123;//如果需要清除缓存，使用这个方法</div><div class="line">               selectorUtils.onDestroy();</div><div class="line">               super.onDestroy();</div><div class="line">           &#125;</div></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/01/android图片选择拍照兼容6.0(权限):7.0(文件共享)/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -435,7 +479,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-01T18:05:35+08:00">
                 2017-03-01
@@ -497,12 +541,13 @@
 
       
         
-          <p><strong>脚本概要：</strong><br> 1.更新脚本<br>如果本地有更改，需要保存<br>如果本地没有更改，不需要保存</p>
-<p>如果本地不是master分支，需要切换到master分支<br>
+          <blockquote>
+<p>子模块命令行批量处理</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/01/git-子模块命令行批量处理思路及其命令/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -584,7 +629,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-01T18:05:10+08:00">
                 2017-03-01
@@ -596,6 +641,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/一行代码系列/" itemprop="url" rel="index">
+                    <span itemprop="name">一行代码系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -646,21 +713,13 @@
 
       
         
-          <p>##一行代码系列之集成微信支付&amp;支付宝支付</p>
-<blockquote>
-<p>Centerpay 开源快速支付封装原生支付宝&amp;微信支付</p>
+          <blockquote>
+<p>一行代码系列之集成微信支付&amp;支付宝支付</p>
 </blockquote>
-<ul>
-<li>依赖jar包</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">centerpay-<span class="number">1.0</span>.0-<span class="number">20170218</span>.jar 核心jar包</div><div class="line">alipaySdk-<span class="number">20161222</span>.jar     原阿里支付jar包</div><div class="line">libammsdk.jar              原微信支付jar包</div><div class="line"></div><div class="line">在当前包下面创建（用过微信的都知道）</div><div class="line">   .wxapi.WXEntryActivity        </div><div class="line">   .wxapi.WXPayEntryActivity</div></pre></td></tr></table></figure>
-<ul>
-<li>在manifest中添加如下配置 </li>
-</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/01/Centerpay-开源快速支付封装原生支付宝-微信支付/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -742,21 +801,30 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
           
 
           
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Tags</span>
-              
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
             </div>
           
 
@@ -798,14 +866,14 @@
   &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-fa-superpowers"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">gizthon</span>
 </div>
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
